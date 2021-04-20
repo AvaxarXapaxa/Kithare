@@ -94,6 +94,13 @@ namespace kh {
     std::u32string quote(const std::string& str);
 
     /// <summary>
+    /// Quotes a string and handles escapes.
+    /// </summary>
+    /// <param name="str">String to be quoted</param>
+    /// <returns></returns>
+    std::u32string quote(const char32_t ch);
+
+    /// <summary>
     ///
     /// </summary>
     /// <param name="str"></param>

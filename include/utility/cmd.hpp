@@ -11,11 +11,13 @@
 
 #include "info.hpp"
 
-#include "utility/string.hpp"
 #include "utility/file.hpp"
+#include "utility/string.hpp"
 
 #include "parser/lexer.hpp"
 #include "parser/parser.hpp"
+
+#include "transpiler/transpile.hpp"
 
 
 namespace kh {

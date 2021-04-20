@@ -121,6 +121,37 @@ std::u32string kh::quote(const std::u32string& str) {
     return repr_str;
 }
 
+std::u32string kh::quote(const char32_t ch) {
+    std::u32string repr_str = U"\'";
+    repr_str.reserve(3);
+
+    switch (ch) {
+        case U'"':
+            repr_str += U"\\\"";
+            break;
+        case U'\\':
+            repr_str += U"\\\\";
+            break;
+        case U'\t':
+            repr_str += U"\\t";
+            break;
+        case U'\v':
+            repr_str += U"\\v";
+            break;
+        case U'\n':
+            repr_str += U"\\n";
+            break;
+        case U'\r':
+            repr_str += U"\\r";
+            break;
+        default:
+            repr_str += ch;
+    }
+
+    repr_str += U"'";
+    return repr_str;
+}
+
 std::u32string kh::quote(const std::string& str) {
     std::u32string repr_str = U"\"";
     repr_str.reserve(str.size() + str.size() / 8 + 2);

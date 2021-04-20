@@ -1,20 +1,6 @@
 import std;
 
-
-class List[<T>] {
-	Test test;
-
-	def a() {
-		std.println("Hello, world!");
-	}
-}
-
-class Another(SomeClass) {
-	def static staticMethod() {
-
-	}
-}
-
-def func[<A, B>]() {
-	
+def int main() {
+	std.println("Hello world");
+	return 0;
 }
